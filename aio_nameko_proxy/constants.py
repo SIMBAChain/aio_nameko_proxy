@@ -3,6 +3,7 @@ from nameko.constants import (AMQP_URI_CONFIG_KEY,
                               RPC_EXCHANGE_CONFIG_KEY,
                               SERIALIZERS_CONFIG_KEY,
                               ACCEPT_CONFIG_KEY,
+                              HEADER_PREFIX,
                               AMQP_SSL_CONFIG_KEY)
 from nameko.rpc import (RPC_REPLY_QUEUE_TEMPLATE,
                         RPC_REPLY_QUEUE_TTL)
