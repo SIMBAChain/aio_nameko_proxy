@@ -51,7 +51,7 @@ class AIOClusterRpcProxy(object):
 
         self.url = URL(amqp_uri)
 
-        self.serializer, self.accept = serialization_setup(_config)
+        self.serializer, self.accept = serialization_setup()
 
         self._exchange_name = _config.pop(RPC_EXCHANGE_CONFIG_KEY, RPC_EXCHANGE_NAME)
 
