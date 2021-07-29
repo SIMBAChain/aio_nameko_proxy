@@ -352,13 +352,6 @@ class MethodProxy(object):
         return msg
         
     async def _call(self, *args, nameko_headers=None, **kwargs) -> "RpcReply":
-
-        if nameko_headers:
-            nameko_headers = {
-                "{}.{}".format(HEADER_PREFIX, key): value
-                for key, value in nameko_headers.items()
-                if value is not None
-            }
         
         payload = {"args": args, "kwargs": kwargs}
         msg = self.make_msg(payload, options={**self.options, 'headers': nameko_headers})
